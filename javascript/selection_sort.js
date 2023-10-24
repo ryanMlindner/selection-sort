@@ -20,4 +20,16 @@ if (require.main === module) {
 module.exports = selectionSort;
 
 // Please add your pseudocode to this file
+/**
+ * given an array of length n
+ * sort through the array to find the lowest value
+ * move that value to the first index of the array
+ * repeat with array of length n-1 starting at index 1
+ * return sorted array
+ */
 // And a written explanation of your solution
+/**
+ * selection sort works by taking the lowest value and putting it at the beginning of the array
+ * then repeating until the array is sorted
+ * it sorts in place, but is slow compared to optimized sorts like timsort or quicksort
+ */
