@@ -1,5 +1,15 @@
 function selectionSort(arr) {
   // type your code here
+  let sorted = [];
+  const iterations = arr.length
+  for (let index = 0; index < iterations; index ++) {
+    let lowest = Math.min(...arr);
+    let indexOfLowest = arr.indexOf(lowest);
+    
+    sorted.push(lowest);
+    arr.splice(indexOfLowest, 1);
+  }
+  return sorted
 }
 
 if (require.main === module) {
@@ -10,6 +20,7 @@ if (require.main === module) {
   console.log("");
 
   // BENCHMARK HERE, and print the average runtime
+  
   const longInput = [];
 
   for (let i = 0; i < 100; ++i) {
