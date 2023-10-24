@@ -20,12 +20,17 @@ if (require.main === module) {
   console.log("");
 
   // BENCHMARK HERE, and print the average runtime
-  
+
   const longInput = [];
 
-  for (let i = 0; i < 100; ++i) {
+  for (let i = 0; i < 10000; ++i) {
     longInput.push(Math.random());
   }
+  const startTime = Date.now()
+  console.log("benchmark: " + longInput.length)
+  selectionSort[longInput]
+  const totalTime = Date.now() - startTime
+  console.log("time in ms: " + totalTime)
 }
 
 module.exports = selectionSort;
